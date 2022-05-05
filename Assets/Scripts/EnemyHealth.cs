@@ -5,21 +5,22 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    private float _MaxEnemyHealth = 30f;
-    private float _enemyHealth;
-
+    public float _MaxEnemyHealth = 30f;
+    public float _enemyHealth;
     private void Start()
-    {      
-        _enemyHealth = _MaxEnemyHealth;
+    {  
+     _enemyHealth = _MaxEnemyHealth;
     }
 
     private void Update()
     {
-        Die();
+        Die();       
     }
     public void Damage(float damage)
     {
+
         _enemyHealth -= damage;
+        
     }
     
     void Die()
